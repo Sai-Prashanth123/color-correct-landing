@@ -52,6 +52,20 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom landing page colors
+				cream: 'hsl(var(--cream))',
+				'orange-primary': 'hsl(var(--orange-primary))',
+				'orange-light': 'hsl(var(--orange-light))',
+				teal: 'hsl(var(--teal))',
+				'teal-light': 'hsl(var(--teal-light))',
+				purple: 'hsl(var(--purple))',
+				'purple-light': 'hsl(var(--purple-light))',
+				green: 'hsl(var(--green))',
+				'green-light': 'hsl(var(--green-light))',
+				blue: 'hsl(var(--blue))',
+				'blue-light': 'hsl(var(--blue-light))',
+				'warm-beige': 'hsl(var(--warm-beige))',
+				coral: 'hsl(var(--coral))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
