@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Menu, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -31,9 +32,11 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <Button variant="ghost" className="hidden md:inline-flex text-gray-700 hover:text-orange-primary">
-            <MapPin className="h-4 w-4 mr-2" />
-            List Your Business
+          <Button variant="ghost" className="hidden md:inline-flex text-gray-700 hover:text-orange-primary" asChild>
+            <Link to="/list-business">
+              <MapPin className="h-4 w-4 mr-2" />
+              List Your Business
+            </Link>
           </Button>
           <Button className="bg-orange-primary hover:bg-orange-primary/90 text-white px-6">
             Start My Trail
