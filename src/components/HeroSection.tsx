@@ -1,46 +1,29 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-beach.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-cream min-h-[80vh] flex items-center overflow-hidden">
-      <div className="container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+    <section className="relative min-h-screen overflow-hidden">
+      <div className="container mx-auto px-4 md:px-10 py-16 md:py-32 pb-0 relative z-10 flex items-start min-h-screen">
+        <div className="text-left mt-20 md:mt-28">
+          <div className="space-y-6 md:space-y-8">
+            <h1 className="text-[32px] sm:text-[48px] md:text-[64px] font-bold font-['Onest'] text-black leading-tight">
               Made for those
               <br />
               <span className="text-orange-primary">allergic to cubicle</span>
             </h1>
             
-            <p className="text-lg text-muted-foreground max-w-md">
-              Get the tools, community and resources to work from anywhere in the world. 
-              Life's too short for office walls.
+            <p className="text-[16px] md:text-[18px] font-normal font-['Onest'] text-black max-w-2xl">
+              Feito para quem é alérgico a escritórios
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button 
                 size="lg" 
-                className="bg-orange-primary hover:bg-orange-primary/90 text-white px-8"
+                className="bg-orange-primary hover:bg-orange-primary/90 text-white w-full sm:w-[188px] h-[50px] text-base font-semibold"
               >
-                Get Started
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-orange-primary text-orange-primary hover:bg-orange-primary hover:text-white"
-              >
-                Learn More
+                Start my trail
               </Button>
             </div>
-          </div>
-          
-          <div className="relative">
-            <img 
-              src={heroImage} 
-              alt="Remote work paradise" 
-              className="w-full h-auto rounded-3xl shadow-2xl"
-            />
           </div>
         </div>
       </div>

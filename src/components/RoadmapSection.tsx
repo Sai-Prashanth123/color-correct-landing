@@ -1,61 +1,83 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Plane, Users, Calendar } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Switch } from "@/components/ui/switch";
+import { Send } from "lucide-react";
 
 const RoadmapSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-cream to-warm-beige">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Your Voice - Our Roadmap
+    <section 
+      className="py-20 bg-cover bg-center bg-no-repeat relative"
+      style={{
+        backgroundImage: "url('/Background+Border+Shadow.png')"
+      }}
+    >
+      {/* Optional overlay for better text readability */}
+      <div className="absolute inset-0 bg-white/10"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto">
+          {/* Heading - 36px */}
+          <h2 className="text-black font-bold mb-6 text-center" style={{ fontSize: '36px' }}>
+            Your Voice = Our Roadmap
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Help us build the future of remote work. Share your ideas and vote on features 
-            that matter most to the nomad community.
+          
+          {/* Subheading - 18px */}
+          <p className="text-black mb-12 text-center" style={{ fontSize: '18px' }}>
+            Your feedback helps us create better tools for the nomadic community.
           </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-orange-light rounded-full flex items-center justify-center mx-auto mb-4">
-              <MapPin className="w-8 h-8 text-orange-primary" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-2">Location Finder</h3>
-            <p className="text-sm text-muted-foreground">AI-powered destination matching</p>
-          </div>
           
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-light rounded-full flex items-center justify-center mx-auto mb-4">
-              <Plane className="w-8 h-8 text-blue" />
+          {/* Feedback Form */}
+          <div className="max-w-2xl mx-auto space-y-6">
+            {/* Email Input */}
+            <div>
+              <label htmlFor="email" className="block text-black text-sm font-medium mb-2">
+                Email
+              </label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="your@email.com"
+                className="w-full bg-white/90 border-gray-300 text-black placeholder:text-gray-500"
+              />
             </div>
-            <h3 className="font-semibold text-foreground mb-2">Travel Planner</h3>
-            <p className="text-sm text-muted-foreground">Seamless trip coordination</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 bg-green-light rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="w-8 h-8 text-green" />
+            
+            {/* Feedback Textarea */}
+            <div>
+              <label htmlFor="feedback" className="block text-black text-sm font-medium mb-2">
+                What would make your nomadic journey easier?
+              </label>
+              <Textarea
+                id="feedback"
+                placeholder="Share your thoughts..."
+                rows={6}
+                className="w-full bg-white/90 border-gray-300 text-black placeholder:text-gray-500 resize-none"
+              />
             </div>
-            <h3 className="font-semibold text-foreground mb-2">Meetup Groups</h3>
-            <p className="text-sm text-muted-foreground">Local nomad communities</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 bg-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
-              <Calendar className="w-8 h-8 text-purple" />
+            
+            {/* Beta Testing Toggle */}
+            <div className="flex items-center space-x-3">
+              <Switch 
+                id="beta-testing" 
+                className="data-[state=checked]:bg-orange-500"
+                defaultChecked={true}
+              />
+              <label htmlFor="beta-testing" className="text-black text-sm font-medium">
+                I'd like to join the beta testing program
+              </label>
             </div>
-            <h3 className="font-semibold text-foreground mb-2">Event Calendar</h3>
-            <p className="text-sm text-muted-foreground">Never miss nomad events</p>
+            
+            {/* Submit Button */}
+            <div className="pt-4">
+              <Button 
+                size="lg" 
+                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-medium flex items-center gap-2"
+              >
+                Submit Feedback
+                <Send className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
-        </div>
-        
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            className="bg-orange-primary hover:bg-orange-primary/90 text-white px-8"
-          >
-            Submit Your Ideas
-          </Button>
         </div>
       </div>
     </section>
