@@ -30,7 +30,154 @@ const Index = () => {
                 Everything you need to work from anywhere, all in one place.
               </p>
               
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-12 mt-2 sm:mt-4 md:mt-8 w-full max-w-6xl px-4">
+            {/* Mobile Layout - Large Overlapping Character Design */}
+            <div className="lg:hidden flex flex-col items-center gap-10 sm:gap-12 w-full max-w-md px-4">
+              {/* Coworking Finder Card */}
+              <div className="w-full relative">
+                <Card className="border-0 shadow-lg w-full bg-[#EDAD68] rounded-2xl relative">
+                  <CardContent className="p-4 sm:p-5 pr-24 sm:pr-28">
+                    <div className="w-10 sm:w-12 h-10 sm:h-12 bg-[#C07F38] rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                      <Monitor className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
+                    </div>
+                    <h3 className="text-[18px] sm:text-[20px] font-bold font-['Onest'] text-black mb-2 sm:mb-3">
+                      Coworking Finder
+                    </h3>
+                    <p className="text-black mb-4 sm:mb-5 text-[12px] sm:text-sm leading-relaxed">
+                      Discover productive workspaces with reliable internet and great coffee worldwide.
+                    </p>
+                    <Button variant="ghost" className="text-black font-bold text-[12px] sm:text-sm p-0 hover:bg-transparent">
+                      Find workspaces →
+                    </Button>
+                  </CardContent>
+                  {/* Large Overlapping Character Image */}
+                  <div className="absolute -top-6 -right-8 w-32 sm:w-36 h-32 sm:h-36 z-20">
+                    <img 
+                      src="/coworkin man.png" 
+                      alt="Coworking character" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </Card>
+              </div>
+              
+              {/* Coliving Spaces Card */}
+              <div className="w-full relative">
+                <Card className="border-0 shadow-lg w-full bg-[#E7C65B] rounded-2xl relative">
+                  <CardContent className="p-4 sm:p-5 pr-24 sm:pr-28">
+                    <div className="w-10 sm:w-12 h-10 sm:h-12 bg-[#D4AF37] rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                      <Home className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
+                    </div>
+                    <h3 className="text-[18px] sm:text-[20px] font-bold font-['Onest'] text-black mb-2 sm:mb-3">
+                      Coliving Spaces
+                    </h3>
+                    <p className="text-black mb-4 sm:mb-5 text-[12px] sm:text-sm leading-relaxed">
+                      Find the perfect coliving space with fast WiFi and a community of like-minded nomads.
+                    </p>
+                    <Button variant="ghost" className="text-black font-bold text-[12px] sm:text-sm p-0 hover:bg-transparent">
+                      Find spaces →
+                    </Button>
+                  </CardContent>
+                  {/* Large Overlapping Character Image */}
+                  <div className="absolute -top-6 -right-8 w-32 sm:w-36 h-32 sm:h-36 z-20">
+                    <img 
+                      src="/Group 1171276523.png" 
+                      alt="Coliving house character" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </Card>
+              </div>
+              
+              {/* Visa Help Card */}
+              <div className="w-full relative">
+                <Card className="border-0 shadow-lg w-full bg-[#3EBFB1] rounded-2xl relative">
+                  <CardContent className="p-4 sm:p-5 pr-24 sm:pr-28">
+                    <div className="w-10 sm:w-12 h-10 sm:h-12 bg-[#2E9A8F] rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                      <FileCheck className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
+                    </div>
+                    <h3 className="text-[18px] sm:text-[20px] font-bold font-['Onest'] text-black mb-2 sm:mb-3">
+                      Visa Help
+                    </h3>
+                    <p className="text-black mb-4 sm:mb-5 text-[12px] sm:text-sm leading-relaxed">
+                      Navigate visa requirements with our comprehensive database and application guides.
+                    </p>
+                    <Button variant="ghost" className="text-black font-bold text-[12px] sm:text-sm p-0 hover:bg-transparent">
+                      Check requirements →
+                    </Button>
+                  </CardContent>
+                  {/* Large Overlapping Character Image */}
+                  <div className="absolute -top-6 -right-8 w-32 sm:w-36 h-32 sm:h-36 z-20">
+                    <img 
+                      src="/Group 1171276531.png" 
+                      alt="Visa help character" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </Card>
+              </div>
+              
+              {/* Additional Services Row - Three Cards */}
+              <div className="w-full mt-4 sm:mt-6">
+                <div className="grid grid-cols-1 gap-3 sm:gap-4">
+                  {/* Smart Flight Search Card */}
+                  <Card className="border-0 shadow-lg bg-gradient-to-r from-[#E1718B] to-[#D15A78] rounded-2xl">
+                    <CardContent className="p-4 text-left">
+                      <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3">
+                        <Plane className="w-5 h-5 text-white" />
+                      </div>
+                      <h3 className="text-[16px] font-bold font-['Onest'] text-white mb-2">
+                        Smart Flight Search
+                      </h3>
+                      <p className="text-white text-opacity-90 mb-3 text-xs leading-relaxed">
+                        Find the best flight deals with flexible dates perfect for digital nomads.
+                      </p>
+                      <Button variant="ghost" className="text-white font-bold text-xs p-0 hover:bg-white hover:bg-opacity-10">
+                        Explore flights →
+                      </Button>
+                    </CardContent>
+                  </Card>
+                  
+                  {/* E-SIM Options Card */}
+                  <Card className="border-0 shadow-lg bg-gradient-to-r from-[#8BA365] to-[#7A9052] rounded-2xl">
+                    <CardContent className="p-4 text-left">
+                      <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3">
+                        <Smartphone className="w-5 h-5 text-white" />
+                      </div>
+                      <h3 className="text-[16px] font-bold font-['Onest'] text-white mb-2">
+                        E-SIM Options
+                      </h3>
+                      <p className="text-white text-opacity-90 mb-3 text-xs leading-relaxed">
+                        Stay connected with affordable data plans that work in multiple countries.
+                      </p>
+                      <Button variant="ghost" className="text-white font-bold text-xs p-0 hover:bg-white hover:bg-opacity-10">
+                        Compare plans →
+                      </Button>
+                    </CardContent>
+                  </Card>
+                  
+                  {/* PDF Trip Planner Card */}
+                  <Card className="border-0 shadow-lg bg-gradient-to-r from-[#807BDD] to-[#7068CA] rounded-2xl">
+                    <CardContent className="p-4 text-left">
+                      <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3">
+                        <FileText className="w-5 h-5 text-white" />
+                      </div>
+                      <h3 className="text-[16px] font-bold font-['Onest'] text-white mb-2">
+                        PDF Trip Planner
+                      </h3>
+                      <p className="text-white text-opacity-90 mb-3 text-xs leading-relaxed">
+                        Generate detailed itineraries with local insights, emergency contacts, and must-visit spots.
+                      </p>
+                      <Button variant="ghost" className="text-white font-bold text-xs p-0 hover:bg-white hover:bg-opacity-10">
+                        Create plan →
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+            
+            {/* Desktop Layout - Original Design */}
+            <div className="hidden lg:flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-12 mt-2 sm:mt-4 md:mt-8 w-full max-w-6xl px-4">
                 <Card className="border-0 shadow-lg w-full max-w-[350px] sm:max-w-[400px] lg:w-[502px] h-auto lg:h-[334px] bg-[#EDAD68] rounded-2xl">
                   <CardContent className="p-4 sm:p-6 md:p-8 text-left h-full flex flex-col justify-start">
                     {/* Icon */}
@@ -66,18 +213,18 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Coliving Spaces Section */}
-        <section className="relative w-full min-h-screen bg-gradient-to-b from-white to-[#FDF0CB] mb-0 pb-0">
+        {/* Coliving Spaces Section - Desktop Only */}
+        <section className="hidden lg:block relative w-full min-h-screen bg-gradient-to-b from-white to-[#FDF0CB] mb-0 pb-0">
           <div className="container mx-auto px-4 md:px-10 relative z-0 flex flex-col items-center justify-start pt-8 sm:pt-16 md:pt-24 lg:pt-38 min-h-screen text-center mb-0 pb-0">
             
             {/* Coliving Card Section */}
             <div className="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-12 w-full max-w-6xl px-4">
               <div className="order-2 lg:order-1">
-                <img 
-                  src="/Group 1171276523.png" 
-                  alt="Coliving house with nomad" 
+              <img 
+                src="/Group 1171276523.png" 
+                alt="Coliving house with nomad" 
                   className="w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[532px] h-auto object-contain"
-                />
+              />
               </div>
               
               <Card className="order-1 lg:order-2 border-0 shadow-lg bg-[#E7C65B] rounded-2xl w-full max-w-[350px] sm:max-w-[400px] lg:w-[502px] h-auto lg:h-[348px]">
@@ -297,9 +444,9 @@ const Index = () => {
                   src="/robot.png" 
                   alt="AI Travel Buddy Robot" 
                   className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[381px] h-auto object-contain mx-auto"
-                />
-              </div>
-            </div>
+                                 />
+               </div>
+             </div>
 
              {/* What's Brewing Section */}
              <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-32 text-center max-w-7xl w-full px-4">
